@@ -160,4 +160,19 @@ section {
   font-weight: 700;
   font-size: 2.5rem;
 }
+
+.product {
+  background: radial-gradient(red, limegreen);
+  padding: 3rem;
+  border-radius: 2rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.product__title {
+  font-size: clamp(2rem, calc(5vw + 1rem), 4rem);
+  color: #fff;
+  text-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.2);
+  line-height: 1.1;
+}
 /*# sourceMappingURL=main.css.map */
