@@ -63,6 +63,7 @@ p {
   padding: 15rem 0;
   background: #222;
   color: #fff;
+  --clr-accent: #faa700;
 
   @supports (background-blend-mode: multiply) {
     background-blend-mode: multiply;
@@ -141,10 +142,13 @@ section {
 }
 
 .product {
-  background: radial-gradient(red, limegreen);
+  background: radial-gradient(
+    var(--clr-inner, gray),
+    var(--clr-outer, #2193b0)
+  );
   padding: 3rem;
   border-radius: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
   text-align: center;
 
   &__title {
@@ -153,4 +157,52 @@ section {
     text-shadow: 0 0 0.25rem rgba(#000, 0.2);
     line-height: 1.1;
   }
+
+  &__img {
+    margin: -5rem 0 0 0;
+  }
+
+  @media (min-width: 45rem) {
+    text-align: left;
+    margin-bottom: 9rem;
+
+    &__title {
+      margin: 0;
+    }
+
+    &__img {
+      float: right;
+      width: 65%;
+      shape-outside: url(../img/shoe-1.png);
+      margin: 0 -5rem 0 0;
+    }
+
+    &.shoe-left {
+      text-align: right;
+      .product__img {
+        float: left;
+        shape-outside: url(../img/shoe-2.png);
+        shape-margin: 2rem;
+        margin: 0 0 0 -5rem;
+      }
+    }
+  }
+}
+
+.shoe-red {
+  --clr-inner: #faa700;
+  --clr-outer: #e48d00;
+  --clr-accent: #a1173c;
+}
+
+.shoe-white {
+  --clr-inner: #fce4b3;
+  --clr-outer: #eac886;
+  --clr-accent: #2f4858;
+}
+
+.shoe-blue {
+  --clr-inner: #6dd5ed;
+  --clr-outer: #2193b0;
+  --clr-accent: #008951;
 }
