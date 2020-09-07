@@ -4,3 +4,52 @@
   box-sizing: border-box;
   font-family: Noto sans;
 }
+
+body {
+  margin: 0;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+.container {
+  width: 85%;
+  max-width: 64em;
+  margin: 0 auto;
+}
+
+.btn {
+  background: var(--clr-accent, blue);
+  display: inline-block;
+  padding: 0.5em 1.25em;
+  color: var(--clr-text, #fff);
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.125em;
+  border-radius: 0.25em;
+  transition: transform 250ms ease-in-out, opacity 175ms ease-in;
+}
+
+.btn:hover,
+.btn:focus {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+.primary-title {
+  font-size: 4em;
+  font-size: clamp(3rem, calc(5vw + 1rem), 4.5rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
