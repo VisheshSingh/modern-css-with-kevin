@@ -94,6 +94,12 @@ section {
   & > * {
     flex-basis: 15em;
   }
+
+  & > :nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
 }
 
 .featured {
